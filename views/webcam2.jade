@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    img(id = "webcam2" src= "http://localhost:3000/images/webcam2-1.jpg")
+    h1= title
+    p Welcome to #{title}
+    script.
+        setInterval(function () {
+                    if (document.getElementById("webcam2").src === "http://localhost:3000/images/webcam2-1.jpg")
+                            document.getElementById("webcam2").src = "http://localhost:3000/images/webcam2-2.jpg"
+                                 else if(document.getElementById("webcam2").src === "http://localhost:3000/images/webcam2-2.jpg")
+                                    document.getElementById("webcam2").src = "http://localhost:3000/images/webcam2-3.jpg"
+                                        else
+                                            document.getElementById("webcam2").src = "http://localhost:3000/images/webcam2-1.jpg"
+                },
+                5000);
+
