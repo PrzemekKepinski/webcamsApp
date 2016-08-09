@@ -6,12 +6,15 @@ block content
     p Welcome to #{title}
     script.
         setInterval(function () {
-                    if (document.getElementById("webcam2").src === "http://localhost:3000/images/webcam2-1.jpg")
-                            document.getElementById("webcam2").src = "http://localhost:3000/images/webcam2-2.jpg"
-                                 else if(document.getElementById("webcam2").src === "http://localhost:3000/images/webcam2-2.jpg")
-                                    document.getElementById("webcam2").src = "http://localhost:3000/images/webcam2-3.jpg"
+            
+            var webcam2 = document.getElementById("webcam2");
+            
+                    if (webcam2.src === "http://localhost:3000/images/webcam2-1.jpg")
+                            webcam2.src = "http://localhost:3000/images/webcam2-2.jpg"
+                                 else if(webcam2.src === "http://localhost:3000/images/webcam2-2.jpg")
+                                    webcam2.src = "http://localhost:3000/images/webcam2-3.jpg"
                                         else
-                                            document.getElementById("webcam2").src = "http://localhost:3000/images/webcam2-1.jpg"
+                                            webcam2.src = "http://localhost:3000/images/webcam2-1.jpg"
                 },
                 5000);
 
